@@ -4,6 +4,10 @@ Deployed on Vercel: https://weather-app-typscript.vercel.app/
 
 #############################################################
 
+![Screenshot 2024-08-26 231622](https://github.com/user-attachments/assets/e8a0ec99-4b45-498f-bec2-2aaed75e9197)
+![Screenshot 2024-08-26 231610](https://github.com/user-attachments/assets/62019cb4-3edd-4089-9714-21ba56f77cfa)
+
+
 
 # Weather App
 
