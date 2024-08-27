@@ -6,3 +6,53 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: url('./assets/pexels-cris-menles-4621648-21287109.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+#root {
+  height: 100%;
+  padding: 20px;
+  margin: 20px;
+}
+
+#weather-container {
+  height: 100%;
+  background: transparent;
+  max-width: 500px;
+  padding: 20px;
+
+}
+
+#weather-card {
+  background: rgba(0,0,0,0.4);
+  border-radius: 35px;
+}
+
+
+
+.weather-title {
+  text-shadow: 0 0 25px black;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-decoration: underline black;
+  margin: 20px;
+
+}
+#city-input {
+  border-radius: 15px;
+  border-style: hidden;
+  border: 2px solid black;
+}
+
+#city-btn {
+  border-radius: 10px;
+  border-style: hidden;
+  background-color: whitesmoke;
+  border: 2px solid black
+
+}

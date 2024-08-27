@@ -1,6 +1,7 @@
 import axios from "axios";
 import { FormEvent, useState } from "react";
 import { Card, Container, Form } from "react-bootstrap";
+import './App.css';
 
 interface WeatherData {
   location: {
@@ -60,8 +61,8 @@ const App: React.FC = () => {
 
 
     <>
-      <Container className="d-flex justify-content-center flex-column align-items-center text-center">
-        <h1>Weather App</h1>
+      <Container id="weather-container" className="d-flex text-white justify-content-center flex-column align-items-center text-center">
+        <h1 className="weather-title">Weather App</h1>
         <Form>
           <input 
           type="text"
@@ -69,24 +70,25 @@ const App: React.FC = () => {
           value={city}
           onChange={(event) => setCity(event.target.value)}
           className="m-2 text-center"
+          id="city-input"
           />
-          <button type="submit" onClick={handleCitySearch}>Search</button>
+          <button id="city-btn" type="submit" onClick={handleCitySearch}>Search</button>
           {error && <p>{error}</p>}
           {weather && (
             <div>
-              <Card className="mx-5 p-3">
+              <Card className="mx-5 p-3" id="weather-card">
                 <Card.Body>
-                  <Card.Title>{weather.location.name}, {weather.location.region}, {weather.location.country} </Card.Title>
+                  <Card.Title className="text-white">{weather.location.name}, {weather.location.region}, {weather.location.country} </Card.Title>
                   <Card.Img 
                   src={weather.current.weather_icons[0]} 
                   alt="Weather Icon"
                   className="mx-auto d-block"
                   style={{ width: '150px', height: '150px' }} />
-                  <Card.Text>Temperature: {weather.current.temperature}°F</Card.Text>
-                  <Card.Text>Weather: {weather.current.weather_descriptions.join(', ')}</Card.Text>
-                  <Card.Text>Wind Speed: {weather.current.wind_speed} mph</Card.Text>
-                  <Card.Text>Feels Like: {weather.current.feelslike}°F</Card.Text>
-                  <Card.Text>Humidity: {weather.current.humidity}%</Card.Text>
+                  <Card.Text className="text-white">Temperature: {weather.current.temperature}°F</Card.Text>
+                  <Card.Text className="text-white">Weather: {weather.current.weather_descriptions.join(', ')}</Card.Text>
+                  <Card.Text className="text-white">Wind Speed: {weather.current.wind_speed} mph</Card.Text>
+                  <Card.Text className="text-white">Feels Like: {weather.current.feelslike}°F</Card.Text>
+                  <Card.Text className="text-white">Humidity: {weather.current.humidity}%</Card.Text>
                 </Card.Body>
               </Card>
             </div>
